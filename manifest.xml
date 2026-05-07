@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+           xsi:type="TaskPaneApp">
+
+  <Id>7e4f29a2-3d91-4e8d-a7c5-9b84f13c62f1</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>SmartWriter AI</ProviderName>
+  <DefaultLocale>he-IL</DefaultLocale>
+  <DisplayName DefaultValue="SmartWriter AI"/>
+  <Description DefaultValue="שיפור טקסט חכם באמצעות Gemini AI"/>
+
+  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.svg"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-80.svg"/>
+
+  <Hosts>
+    <Host Name="Document"/>
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <VersionOverrides xsi:type="ov:VersionOverridesV1_0"
+                    xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides">
+    <Hosts>
+      <Host xsi:type="Document">
+        <DesktopFormFactor>
+          <FunctionFile resid="Taskpane.Url"/>
+
+          <ExtensionPoint xsi:type="ContextMenu">
+            <OfficeMenu id="ContextMenuText">
+              <Control xsi:type="MenuItem" id="SmartWriter.ContextMenu">
+                <Label resid="SmartWriter.Label"/>
+                <Action xsi:type="ShowTaskpane">
+                  <SourceLocation resid="Taskpane.Url"/>
+                </Action>
+              </Control>
+            </OfficeMenu>
+          </ExtensionPoint>
+
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Urls>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+</OfficeApp>

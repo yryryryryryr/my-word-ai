@@ -1,0 +1,52 @@
+body {
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 16px;
+    font-family: Segoe UI, Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+textarea,
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#spinner {
+    text-align: center;
+    font-weight: bold;
+}

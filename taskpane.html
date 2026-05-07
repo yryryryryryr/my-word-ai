@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartWriter AI</title>
+
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+
+  <link rel="stylesheet"
+        href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.001/office-ui-fabric-core/11.0.0/css/fabric.min.css">
+
+  <link rel="stylesheet" href="taskpane.css">
+</head>
+<body class="ms-Fabric">
+
+<div class="container">
+
+  <div id="settingsPanel" class="hidden">
+    <h2>הגדרות API</h2>
+    <input id="apiKeyInput" class="ms-TextField-field" type="password" placeholder="Gemini API Key">
+    <button id="saveApiKey" class="ms-Button ms-Button--primary">שמור</button>
+  </div>
+
+  <div id="mainPanel">
+    <div class="header">
+      <h1>SmartWriter AI</h1>
+      <button id="toggleSettings">⚙</button>
+    </div>
+
+    <label>טקסט נבחר</label>
+    <textarea id="selectedText"></textarea>
+
+    <label>הוראות נוספות</label>
+    <input id="instructions" type="text" placeholder="לדוגמה: קצר את הטקסט">
+
+    <button id="improveBtn" class="ms-Button ms-Button--primary">שפר כתיבה</button>
+
+    <div id="spinner" class="hidden">טוען...</div>
+
+    <label>תוצאה</label>
+    <textarea id="resultText"></textarea>
+
+    <div class="actions">
+      <button id="replaceBtn">החלף בטקסט</button>
+      <button id="insertBtn">הוסף מתחת</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="taskpane.js"></script>
+</body>
+</html>
