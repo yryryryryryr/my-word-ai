@@ -12,15 +12,15 @@
   <DisplayName DefaultValue="SmartWriter AI"/>
   <Description DefaultValue="שיפור טקסט חכם באמצעות Gemini AI"/>
 
-  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.svg"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-80.svg"/>
+  <IconUrl DefaultValue="https://yryryryryryr.github.io/my-word-ai/assets/icon-32.svg"/>
+  <HighResolutionIconUrl DefaultValue="https://yryryryryryr.github.io/my-word-ai/assets/icon-80.svg"/>
 
   <Hosts>
     <Host Name="Document"/>
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+    <SourceLocation DefaultValue="https://yryryryryryr.github.io/my-word-ai/taskpane.html"/>
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
@@ -49,5 +49,12 @@
 
     <Resources>
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://yryryryryryr.github.io/my-word-ai/taskpane.html"/>
+      </bt:Urls>
+
+      <bt:ShortStrings>
+        <bt:String id="SmartWriter.Label" DefaultValue="SmartWriter AI"/>
+      </bt:ShortStrings>
+    </Resources>
+  </VersionOverrides>
 </OfficeApp>
